@@ -5,6 +5,8 @@ int check_cycle(listint_t *list)
 	listint_t *pt1;
 	listint_t *pt2;
 
+	if (!list)
+		return (NULL);
 	pt1 = malloc(sizeof(listint_t));
 	pt2 = malloc(sizeof(listint_t));
 
