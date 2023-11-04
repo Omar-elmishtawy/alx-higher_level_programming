@@ -8,6 +8,9 @@ def print_reversed_list_integer(my_list=[]):
     ----------
     my_list : list optional
         The list of integers
+    idx : intger
+        the giver pisition
+    element : the new element
 
     Return:
         None
