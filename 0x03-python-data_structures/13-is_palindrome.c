@@ -20,14 +20,14 @@ int is_palindrome(listint_t **head)
 		prev = prev->next;
 	}
 	temp = prev;
-	next = temp;
+	next = temp->next;
 	prev = NULL;
 	while (next)
 	{
-		next = temp->next;
 		temp->next = prev;
 		prev = temp;
 		temp = next;
+		next = next->next;
 	}
 	while (*head && prev)
 	
