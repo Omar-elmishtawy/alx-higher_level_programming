@@ -24,7 +24,6 @@ int is_palindrome(listint_t **head)
 	prev = NULL;
 	while (next)
 	{
-		printf("%d\n", next->n);
 		next = temp->next;
 		temp->next = prev;
 		prev = temp;
