@@ -12,25 +12,24 @@ int is_palindrome(listint_t **head)
 	listint_t *prev = *head;
 	listint_t *temp = NULL;
 
-	while (next->next != NULL && next != NULL)
+	while (next != NULL && next->next != NULL)
 	{
 		next = next->next->next;
 		prev = prev->next;
 	}
 	temp = prev;
-	next = temp->next;
+	next = temp;
 	prev = NULL;
-
 	while (next)
 	{
+		printf("%d\n", next->n);
+		next = temp->next;
 		temp->next = prev;
 		prev = temp;
 		temp = next;
-		next = next->next;
 	}
-	temp->next = prev;
-
-	while (*head)
+	while (*head && temp)
+	
 	{
 		if ((*head)->n == temp->n)
 		{
@@ -38,9 +37,7 @@ int is_palindrome(listint_t **head)
 			temp = temp->next;
 		}
 		else
-			break;
+			return (0);
 	}
-	if (*head == NULL)
-		return (1);
-	return (0);
+	return (1);
 }
