@@ -24,18 +24,20 @@ int is_palindrome(listint_t **head)
 	prev = NULL;
 	while (next)
 	{
+
 		temp->next = prev;
 		prev = temp;
 		temp = next;
 		next = next->next;
 	}
-	while (*head && prev)
+	temp->next = prev;
+	while (*head && temp)
 	
 	{
-		if ((*head)->n == prev->n)
+		if ((*head)->n == temp->n)
 		{
 			*head = (*head)->next;
-			prev = prev->next;
+			temp = temp->next;
 		}
 		else
 			return (0);
