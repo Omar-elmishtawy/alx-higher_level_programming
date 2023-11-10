@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
 def common_elements(set_1, set_2):
-    common_elements = []
-    min_list = [len(set_1) if len(set_1) < len(set_2) else len(set_2)]
-    for i in range(len(min_list)):
-        if list(set_1)[i] == list(set_2)[i]:
-            common_elements.append(list(set_1)[i])
+    common_elements = [i for i in set_1 for j in set_2 if i == j]
     return common_elements
+
+set_1 = { "Python", "C", "Javascript" }
+set_2 = { "Bash", "C", "Ruby", "Perl" }
+c_set = common_elements(set_1, set_2)
+print(sorted(list(c_set)))
+
