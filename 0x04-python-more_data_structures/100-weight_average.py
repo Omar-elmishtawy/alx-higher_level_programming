@@ -3,6 +3,9 @@
 def weight_average(my_list=[]):
     average = 0
     probability = 0
+    if not len(my_list):
+        return average
+
     for i in my_list:
         probability += i[1]
     probability = 1 / probability
