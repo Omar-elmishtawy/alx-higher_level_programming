@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 
 def complex_delete(a_dictionary, value):
     a_dic_cp = a_dictionary.copy()
