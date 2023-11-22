@@ -9,6 +9,7 @@ class Square:
 
         Args:
         size(int): size of square
+        position (int, int): position on new square
 
         """
         if not isinstance(size, int):
