@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Node for single linked list"""
 
+
 class Node:
     """class to create node for a singlelinked list
-        
+
         Args:
             data (int): value to be set in the data for the node
             next_node (Node): object from Node
@@ -21,6 +22,7 @@ class Node:
 
     @data.setter
     def data(self, value):
+        """to set data"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
@@ -33,7 +35,7 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         "setter for the next node"
-        if isinstance(value, Node) or  not value:
+        if isinstance(value, Node) or not value:
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
@@ -62,7 +64,7 @@ class SinglyLinkedList:
                 temp = temp.next_node
             node.next_node = temp.next_node
             temp.next_node = node
-    
+
     def __str__(self):
         value = []
         tmp = self.__head
@@ -71,4 +73,3 @@ class SinglyLinkedList:
             value.append(str(tmp.data))
             tmp = tmp.next_node
         return "\n".join(value)
-
