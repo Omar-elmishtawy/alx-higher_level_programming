@@ -35,7 +35,6 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         "setter for the next node"
-        print("I get here")
         if isinstance(value, Node) or not value:
             self.__next_node = value
         else:
