@@ -12,8 +12,8 @@ class Node:
     def __init__(self, data, next_node=None):
         """Initialization for the object from the class Node """
 
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -35,6 +35,7 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         "setter for the next node"
+        print("I get here")
         if isinstance(value, Node) or not value:
             self.__next_node = value
         else:
@@ -42,6 +43,7 @@ class Node:
 
 
 class SinglyLinkedList:
+
     """
     class of the singlylinked list
     """
