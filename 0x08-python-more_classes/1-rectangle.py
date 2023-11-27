@@ -4,7 +4,6 @@
 
 class Rectangle:
     """class for rectangle
-        
         args:
             width (int): width of the rectangle
             height (int): height of the rectangle
