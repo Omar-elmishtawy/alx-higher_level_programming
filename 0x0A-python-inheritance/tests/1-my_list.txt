@@ -37,3 +37,11 @@ Now use it:
 
 	>>> ls2.print_sorted()
 	[-1, 1, 9999]
+
+	>>> string_list = MyList("Omar")
+
+	>>> print(string_list)
+	['O', 'm', 'a', 'r']
+
+	>>> string_list.print_sorted()
+	['O', 'a', 'm', 'r']
