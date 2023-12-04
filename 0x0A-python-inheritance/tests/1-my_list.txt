@@ -1,0 +1,39 @@
+=============================
+The ``1-my_list`` module
+=============================
+
+Using ``MyList``
+---------------------
+
+Import the class:
+
+	>>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+	>>> ls = MyList()
+
+	>>> print(ls)
+	[]
+
+	>>> ls.append(1)
+
+	>>> ls.append(9999)
+
+	>>> ls.append(-1)
+
+	>>> print(ls)
+	[1, 9999, -1]
+
+	>>> ls.print_sorted()
+	[-1, 1, 9999]
+
+	>>> ls2 = MyList()
+
+	>>> ls2 = ls
+
+	>>> print(ls2)
+	[1, 9999, -1]
+
+	>>> ls2.print_sorted()
+	[-1, 1, 9999]
