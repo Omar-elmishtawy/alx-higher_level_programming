@@ -57,10 +57,10 @@ Now test it:
 	Traceback (most recent call last):	
 	TypeError: no must be an integer
 
-	>>> bg.integer_validator("no", bg):
+	>>> bg.integer_validator("no", bg)
 	Traceback (most recent call last):	
 	TypeError: no must be an integer
 
-	>>> bgd.integer_validator("no", None)
+	>>> bg.integer_validator("no", None)
 	Traceback (most recent call last):	
 	TypeError: no must be an integer
