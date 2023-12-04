@@ -2,6 +2,6 @@
 """Gemotry module"""
 
 
-class BaseGeomtry():
+class BaseGeometry():
     """Base gemotry clas"""
     pass
