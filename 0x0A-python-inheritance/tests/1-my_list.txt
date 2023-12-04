@@ -45,3 +45,8 @@ Now use it:
 
 	>>> string_list.print_sorted()
 	['O', 'a', 'm', 'r']
+
+	>>> k = MyList()
+
+	>>> k.print_sorted()
+	[]
