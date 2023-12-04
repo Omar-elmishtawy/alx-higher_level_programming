@@ -56,3 +56,11 @@ Now test it:
 	>>> bg.integer_validator("no", {1, 2})
 	Traceback (most recent call last):	
 	TypeError: no must be an integer
+
+	>>> bg.integer_validator("no", bg):
+	Traceback (most recent call last):	
+	TypeError: no must be an integer
+
+	>>> bgd.integer_validator("no", None)
+	Traceback (most recent call last):	
+	TypeError: no must be an integer
