@@ -3,14 +3,14 @@
 
 
 def pascal_triangle(n):
-    """print pascal triangle 
+    """print pascal triangle
         args:
             n(int): heigth of the triangle
     """
     if n <= 0:
         return [[]]
     ls = [[1]]
-    for i in range(1,n):
+    for i in range(1, n):
         ls_tmp = []
         for j in range(len(ls[i-1])+1):
             if j == 0 or j == len(ls[i-1]):
