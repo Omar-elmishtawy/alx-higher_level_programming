@@ -11,14 +11,13 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 if __name__ == "__main__":
 
-    fn = "add_item.json"
+    filename = "add_item.json"
 
     try:
-        arg_ls = load_from_json_file(file_name)
+        arg_list = load_from_json_file(filename)
     except:
-        arg_ls = []
+        arg_list = []
 
     for arg in sys.argv[1:]:
-        arg_ls.append(arg)
-
-    save_to_json_file(arg_ls, filename)
+        arg_list.append(arg)
+    save_to_json_file(arg_list, filename)
