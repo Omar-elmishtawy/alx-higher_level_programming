@@ -3,6 +3,6 @@
 import json
 
 
-def from_json_String(my_str):
+def from_json_string(my_str):
     """read file and print it to stdout"""
     return json.loads(my_str)
