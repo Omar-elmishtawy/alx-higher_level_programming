@@ -3,7 +3,7 @@
 import json
 
 
-def save_to_json_file(filename):
+def load_from_json_file(filename):
     """read file and print it to stdout"""
     with open(filename, "w") as f:
         obj = json.load(f)
