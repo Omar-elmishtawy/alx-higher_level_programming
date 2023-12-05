@@ -6,4 +6,5 @@ import json
 def save_to_json_file(filename):
     """read file and print it to stdout"""
     with open(filename, "w") as f:
-        json.load(f)
+        obj = json.load(f)
+        return obj
