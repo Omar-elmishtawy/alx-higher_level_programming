@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-"""pascal"""
-import math
+"""pascal triangle module"""
 
 
 def pascal_triangle(n):
+    """print pascal triangle 
+        args:
+            n(int): heigth of the triangle
+    """
     if n <= 0:
         return [[]]
     ls = [[1]]
