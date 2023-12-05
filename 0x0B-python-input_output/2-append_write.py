@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Read file module"""
+import json
 
 
-def append_write(filename="", text=""):
+def to_json_string(my_obj):
     """read file and print it to stdout"""
-    with open(filename, "a") as f:
-        return f.write(text)
+    return json.dumps(my_obt)
