@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-"""Read file module"""
-import json
+"""
+file module
+"""
 
 
-def to_json_string(my_obj):
-    """read file and print it to stdout"""
-    return json.dumps(my_obt)
+def append_write(filename="", text=""):
+    """
+    write file append
+    Args:
+        filname
+        text
+    """
+    with open(filename, 'a', encoding="utf-8") as f:
+        return f.write(text)
