@@ -8,7 +8,7 @@ def pascal_triangle(n):
             n(int): heigth of the triangle
     """
     if n <= 0:
-        return [[]]
+        return []
     ls = [[1]]
     for i in range(1, n):
         ls_tmp = []
