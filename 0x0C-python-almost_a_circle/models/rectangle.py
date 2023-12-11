@@ -99,3 +99,10 @@ class Rectangle(Base):
             self.y = args[4]
         except Exception as e:
             pass
+
+    def to_dictionary(self):
+        return {'id': self.id
+                'width': self.width
+                'height': self.height
+                'x', self.x
+                'y', self.y}
