@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def __validate_attributes_int(self, name, side, x_y=False):
+    def validate_attributes_int(self, name, side, x_y=False):
         if not isinstance(side, int):
             raise TypeError("{} must be integer".format(name))
         if not x_y:
@@ -56,7 +56,7 @@ class Rectangle(Base):
     def x(self, x):
         """x setter
         """
-        self.__validate_attributes_int('x', x, True)
+        self.validate_attributes_int('x', x, True)
         self.__x = x
 
     @property
@@ -69,7 +69,7 @@ class Rectangle(Base):
     def y(self, y):
         """y setter
         """
-        self.__validate_attributes_int('y', y, True)
+        self.validate_attributes_int('y', y, True)
         self.__y = y
 
     def area(self):
