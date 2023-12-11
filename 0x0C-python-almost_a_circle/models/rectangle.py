@@ -6,6 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     "Rectangle class"
     def __init__(self, width, height, x=0, y=0, id=None):
+        "initilization for the rectangle"
         super().__init__(id)
         self.width = width
         self.height = height
@@ -76,17 +77,19 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        "display the rectangle"
         print(self.y * "\n", end="")
         for i in range(self.height):
             print(self.x * " ", end="")
             print(self.width * "#")
 
     def __str__(self):
+        "return rdctangle"
         return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-
+        "Update the rectangle"
         if len(args) == 0:
             for key, val in kwargs.items():
                 self.__setattr__(key, val)
@@ -102,6 +105,7 @@ class Rectangle(Base):
             pass
 
     def to_dictionary(self):
+        "return the rectangle as dictionary"
         return ({'id': self.id,
                 'width': self.width,
                 'height': self.height,
