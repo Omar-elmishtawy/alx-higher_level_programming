@@ -14,6 +14,7 @@ class Rectangle(Base):
         self.y = y
 
     def validate_attributes_int(self, name, side, x_y=False):
+        "validate the attributes"
         if not isinstance(side, int):
             raise TypeError("{} must be integer".format(name))
         if not x_y:
