@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+"""Execute sql queries using MySQLdb"""
 import MySQLdb
 import sys 
 
