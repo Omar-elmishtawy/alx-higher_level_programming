@@ -1,18 +1,29 @@
 #!/usr/bin/python3
 
-"""Execute sql queries using MySQLdb"""
-import MySQLdb
-import sys
+"""
+list all states
+"""
 
-if __name__ == 'main':
+
+import sys
+import MySQLdb
+
+
+if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3],
-                         port=3306,
-                         host='localhost')
-    c = db.cursor()
-    c.execute("SELECT * FROM states ORDER BY id ASC")
-    states = c.fetchall()
+                         host='localhost',
+                         port=3306)
 
-    for state in states:
-        print(state)
+    cursor = db.cursor()
+
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+
+    data = cursor.fetchall()
+
+    for row in data:
+        print(row)
+
+    cursor.close()
+    db.close()
