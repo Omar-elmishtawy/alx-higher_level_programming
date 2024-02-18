@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     sql = """SELECT c.id, c.name
         FROM cities AS c
-        WHERE c.state_id = (SELECT id FROM states 
+        WHERE c.state_id = (SELECT id FROM states
         WHERE name = %s)
         ORDER BY c.id ASC"""
 
