@@ -19,6 +19,8 @@ request(url, function (err, response, body) {
         userId = parsedBody[i].userId;
         count = 0;
         i = i - 1;
+      } else {
+        return;
       }
     }
     dict[userId] = count;
