@@ -19,11 +19,11 @@ request(url, function (err, response, body) {
         userId = parsedBody[i].userId;
         count = 0;
         i = i - 1;
-      } else {
-        return;
       }
     }
-    dict[userId] = count;
+    if (userId) {
+      dict[userId] = count;
+    }
     console.log(dict);
   }
 });
