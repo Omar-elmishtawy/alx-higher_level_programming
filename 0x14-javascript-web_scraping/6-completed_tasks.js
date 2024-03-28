@@ -1,29 +1,25 @@
 #!/usr/bin/node
 
+const args = process.argv;
+const url = args[2];
 const request = require('request');
-const url = process.argv[2];
-
-request(url, function (err, response, body) {
-  if (err) {
-    console.log(err);
+request(url, function (error, response, body) {
+  if (error) {
+    console.log('error:', error);
   } else {
-    const parsedBody = JSON.parse(body);
-    const dict = {};
-    let count = 0;
-    let userId = parsedBody[0].userId;
-    for (let i = 0; i < parsedBody.length; i++) {
-      if (userId === parsedBody[i].userId && parsedBody[i].completed) {
-        count = count + 1;
-      } else if (userId !== parsedBody[i].userId) {
-        dict[userId] = count;
-        userId = parsedBody[i].userId;
-        count = 0;
-        i = i - 1;
+    const todos = JSON.parse(body);
+    const dash = {};
+    for (let i = 0; i < todos.length; i++) {
+      const status = (todos[i].completed);
+      const key = todos[i].userId.toString();
+      if (status) {
+        if (dash[key]) {
+          dash[key]++;
+        } else {
+          dash[key] = 1;
+        }
       }
     }
-    if (userId) {
-      dict[userId] = count;
-    }
-    console.log(dict);
+    console.log(dash);
   }
 });
