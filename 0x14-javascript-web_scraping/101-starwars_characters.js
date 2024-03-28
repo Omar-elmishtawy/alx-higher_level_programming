@@ -9,8 +9,6 @@ request(url, function (error, response, body) {
     const film = JSON.parse(body);
     const chars_api = film.characters;
     const len_chars = chars_api.length;
-    const list_char = [];
-    console.log(chars_api[0]);
     for (let i = 0; i < len_chars; i++) {
       request(chars_api[i], function (error,response, body) {
         if (error) {
